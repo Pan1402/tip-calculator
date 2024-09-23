@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="./main.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <header class="tip-calculator__header">
+      <div class="tip-calculator__logo">
+        <img src="./images/logo.svg" alt="Logo" />
+      </div>
+    </header>
+    <main>
+      <form class="tip-calculator__form">
+        <div class="tip-calculator__bill">
+          <label for="bill" class="tip-calculator__heading">Bill</label>
+          <div class="tip-calculator__input tip-calculator__input--bill">
+            <div class="tip-calculator__bill-icon">
+              <img src="./images/icon-dollar.svg" alt="currency" />
+            </div>
+            <input
+              type="text"
+              id="bill"
+              name="bill"
+              placeholder="0"
+              class="input--bill"
+            />
+          </div>
+        </div>
+
+        <div class="tip-calculator__percentage">
+          <p class="tip-calculator__heading">Select Tip %</p>
+          <div class="tip-calculator__buttons">
+            <button class="tip-calculator__button">5%</button>
+            <button class="tip-calculator__button">10%</button>
+            <button class="tip-calculator__button tip-calculator__button">
+              15%
+            </button>
+            <button class="tip-calculator__button">25%</button>
+            <button class="tip-calculator__button">50%</button>
+            <button
+              class="tip-calculator__button tip-calculator__button--custom"
+              contenteditable="true"
+            >
+              Custom
+            </button>
+          </div>
+        </div>
+
+        <div class="tip-calculator__people">
+          <label for="people" class="tip-calculator__heading"
+            >Number of People</label
+          >
+          <div class="tip-calculator__input tip-calculator__input--people">
+            <p class="error">Can't Be Zero</p>
+            <div class="tip-calculator__people-icon">
+              <img src="./images/icon-person.svg" alt="person" />
+            </div>
+            <input
+              type="number"
+              id="people"
+              class="input--person"
+              placeholder="1"
+            />
+          </div>
+        </div>
+      </form>
+      <section class="result">
+        <div class="result__display">
+          <div class="result__tip result__tip--person">
+            <p class="result__tip-text result__tip-text--person">
+              Tip Amount <span>/person</span>
+            </p>
+            <p class="result__tip-amount result__tip-amount--bill">$0</p>
+          </div>
+          <div class="result__tip result__tip--bill">
+            <p class="result__tip-text result__tip-text--bill">
+              Total <span>/person</span>
+            </p>
+            <p class="result__tip-amount result__tip-amount--person">$0</p>
+          </div>
+        </div>
+
+        <button class="result__reset-btn">Reset</button>
+      </section>
+    </main>
+  </body>
+</html>
